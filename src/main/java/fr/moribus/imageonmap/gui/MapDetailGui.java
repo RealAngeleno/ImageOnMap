@@ -193,7 +193,7 @@ public class MapDetailGui extends ExplorerGui<Integer> {
         }
 
         if (canDelete) {
-            ItemStack item = new ItemStack(Material.BARRIER);
+            ItemStack item = new ItemStack(Material.COMPOSTER);
             ItemMeta meta = item.getItemMeta();
             meta.setDisplayName(I.t(getPlayerLocale(), "{red}Delete this image"));
             List<String> lore = GuiUtils.generateLore(I.t(getPlayerLocale(),
