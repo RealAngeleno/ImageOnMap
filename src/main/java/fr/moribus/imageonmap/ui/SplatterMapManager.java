@@ -243,7 +243,7 @@ public abstract class SplatterMapManager {
                     MapMeta meta = (MapMeta) item.getItemMeta();
                     meta.setMapId(id);
                     item.setItemMeta(meta);
-
+                    frame.setVisible(!kyscarbon);
                     frame.setItem(item);
                 }, 5L);
 
@@ -370,6 +370,7 @@ public abstract class SplatterMapManager {
                 if (frame != null) {
                     maps.remove(Integer.valueOf(MapManager.getMapIdFromItemStack(frame.getItem())));
                     frame.setItem(null);
+                    frame.setVisible(true);
                 }
             }
 
