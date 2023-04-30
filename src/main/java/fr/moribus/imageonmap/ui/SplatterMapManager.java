@@ -198,7 +198,7 @@ public abstract class SplatterMapManager {
     @SuppressWarnings("deprecation")
     public static boolean placeSplatterMap(ItemFrame startFrame, Player player) {
         ImageMap map = MapManager.getMap(player.getInventory().getItemInMainHand());
-
+        boolean kyscarbon = player.isSneaking();
         if (!(map instanceof PosterMap poster)) {
             return false;
         }
@@ -306,7 +306,7 @@ public abstract class SplatterMapManager {
                     MapMeta meta = (MapMeta) item.getItemMeta();
                     meta.setMapId(id);
                     item.setItemMeta(meta);
-
+                    frame.setVisible(!kyscarbon);
                     frame.setItem(item);
                 }, 5L);
 
