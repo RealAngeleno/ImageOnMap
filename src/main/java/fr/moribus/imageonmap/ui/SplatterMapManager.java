@@ -370,7 +370,7 @@ public abstract class SplatterMapManager {
                 if (frame != null) {
                     maps.remove(Integer.valueOf(MapManager.getMapIdFromItemStack(frame.getItem())));
                     frame.setItem(null);
-                    frame.setVisible(true);
+
                 }
             }
 
